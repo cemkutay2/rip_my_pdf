@@ -4,7 +4,7 @@ import os
 
 # convert images to pdf
 def convert_to_pdf(image_files):
-    pdf_file = "output.pdf"
+    pdf_file = "outputs/output.pdf"
     c = canvas.Canvas(pdf_file, pagesize=letter)
 
     image_folder = "pages"

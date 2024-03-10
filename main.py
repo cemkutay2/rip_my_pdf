@@ -2,6 +2,7 @@ import pyautogui as pag
 import os
 import time
 import convert_to_pdf as ctp
+import glob
 
 page_count = int(input("page count: "))
 
@@ -33,3 +34,8 @@ for page in range(1, page_count + 1):
 
 # convert images to pdf
 ctp.convert_to_pdf(image_files)
+
+# clear pages folder
+files = glob.glob('pages/*')
+for f in files:
+    os.remove(f)
